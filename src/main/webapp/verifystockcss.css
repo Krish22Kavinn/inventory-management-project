@@ -1,0 +1,112 @@
+@charset "ISO-8859-1";
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.searching {
+  position: relative;
+  height: 50px;
+  width: 80px;
+  margin-left: auto;
+  opasity: 0;
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+}
+.searching .search-open {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #222;
+  width: 80px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  vertical-aling: middle;
+  background: #efefef;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+.searching .search-inline {
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9;
+  transition: all .5s ease-in-out;
+}
+.searching .search-inline button[type="submit"] {
+  position: absolute;
+  right: 52px;
+  top: 0;
+  background-color: transparent;
+  border: 0px;
+  top: 0;
+  right: 80px;
+  padding: 0px;
+  cursor: pointer;
+  width: 80px;
+  height: 99%;
+  background: #222;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.searching .search-inline .form-control {
+  border: 0px;
+  font-size: 1rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.searching .search-inline .form-control:focus {
+  box-shadow: none;
+}
+.searching .search-inline .search-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #222;
+  width: 80px;
+  height: 100%;
+  text-align: center;
+  display: table;
+  background: #efefef;
+  text-decoration: none;
+}
+.searching .search-inline .search-close i {
+  display: table-cell;
+  vertical-align: middle;
+}
+.searching .search-inline.search-visible {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 0.2s ease-in-out;
+  transform-origin: 100% 50%;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.searching.searching-visible {
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+  transform-origin: 100% 50%;
+}
